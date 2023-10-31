@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>Document</title>
+
+        <!-- 기본 메타 태그 -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="링크 단축 서비스">
+		<meta name="author" content="천상의나무">
+        <meta name="keyword" content="링크단축">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/static/css/index.css">
+
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script src="/static/js/index.js"></script>
+    </head>
+    <body>
+        <div class="main_box">
+            <div class="center_box">
+                <a class="title">ajb.kr</a>
+                <div class="input_box">
+                    <div class="input_second_box">
+                        <input type="text" class="input" id="input" placeholder="링크를 입력하세요" onkeypress="input_enter(event)">
+                        <button class="submit_button" id="submit_button" onclick="click_button()">단축</button>
+                    </div>
+                </div>
+                <div class="result_box">
+                    <a class="result_title">단축 URL 결과</a><br>
+                    <div class="result">
+                        <a class="result_text" id="result_text">https://ajb.kr/s/a</a>
+                        <button class="copy_button" id="copy_button" onclick="copy_result()">복사</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

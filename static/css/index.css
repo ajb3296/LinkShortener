@@ -1,0 +1,158 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f4f4f4;
+}
+
+.main_box {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.center_box {
+    height: 20%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_box {
+    width: 90%;
+    height: 50%;
+
+    display: flex;
+    align-items: center;
+}
+
+.input_second_box {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    width: 90%;
+    height: 40px;
+
+    padding: 0 0 0 30px;
+
+    background-color: #ffffff00;
+
+    border-radius: 50px;
+    border: 1px solid #cacaca9a;
+}
+
+.submit_button {
+    width: 80px;
+    height: 40px;
+    margin-left: 10px;
+
+    padding: 20px;
+
+    border-radius: 50px;
+
+    background-color: #f4f4f4;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #cacaca9a;
+
+    background-color: #cacaca9a;
+
+    transition: all 0.5s;
+}
+.submit_button:hover {
+    background-color: #cacaca;
+    border: 1px solid #cacaca;
+}
+
+.result_box {
+    width: 100%;
+    height: 50%;
+
+    margin-top: 50px;
+    
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    width: 80%;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 50px;
+    border: 1px solid #d9d9d9;
+}
+
+.result_title {
+    font-size: 30px;
+}
+
+.result_text {
+    font-size: 15px;
+
+    margin-left: 20px;
+}
+
+.copy_button {
+    width: 80px;
+    height: 40px;
+
+    padding: 20px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 0px;
+
+    background-color: #d9d9d9;
+
+    transition: all 0.5s;
+}
+.copy_button:hover {
+    background-color: #cacaca;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 1000px) {
+    .center_box {
+        width: 90%;
+    }
+}
