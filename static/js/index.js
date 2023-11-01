@@ -45,4 +45,6 @@ async function copy_result() {
     window.getSelection().addRange(r);
     document.execCommand('copy');
     window.getSelection().removeAllRanges();
+
+    alert("복사되었습니다");
 }
