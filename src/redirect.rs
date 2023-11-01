@@ -8,6 +8,11 @@ async fn redirect(num: web::Path<String>, data: web::Data<mysql::Pool>) -> impl 
     let num = num.into_inner();
     let num: u128 = base62_to_base10(num);
     let url = get_url_from_id(&data, num);
+    
+    let url = match url {
+        Ok(url) => url,
+        Err(_) => String::from("https://ajb.kr"),
+    };
 
     Redirect::to(url).permanent()
 }

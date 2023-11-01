@@ -21,7 +21,7 @@ pub fn enroll_to_db(pool: &Pool, url: String) -> Result<u128, ()> {
     }
 }
 
-pub fn get_url_from_id(pool: &Pool, id: u128) -> String {
+pub fn get_url_from_id(pool: &Pool, id: u128) -> Result<String, Error> {
     let mut conn = pool.get_conn().unwrap();
 
     let query = format!(
@@ -31,5 +31,8 @@ pub fn get_url_from_id(pool: &Pool, id: u128) -> String {
 
     let result: Option<String> = conn.query_first(query).unwrap();
 
-    result.ok_or_else(|| Error::from(std::io::Error::new(std::io::ErrorKind::NotFound, "No URL found"))).unwrap()
+    match result {
+        Some(url) => return Ok(url),
+        None => return Err(Error::from(std::io::Error::new(std::io::ErrorKind::NotFound, "No URL found"))),
+    }
 }

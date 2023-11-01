@@ -49,8 +49,8 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .app_data(shared_data.clone())
             .service(fs::Files::new("/static", "./static").show_files_listing())
-            .service(redirect::redirect)
             .service(index::index)
+            .service(redirect::redirect)
             .service(enroll::enroll)
     })
     .bind(("0.0.0.0", 8080))?

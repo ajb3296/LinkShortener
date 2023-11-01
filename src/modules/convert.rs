@@ -22,9 +22,10 @@ pub fn base62_to_base10(num: String) -> u128 {
     let base62: Vec<char> = base62.chars().collect();
 
     while num.len() > 0 {
-        let remainder = num.pop().unwrap();
-        let index = base62.iter().position(|&r| r == remainder).unwrap();
-        result += index as u128 * 62u128.pow(num.len() as u32);
+        if let Some(remainder) = num.pop() {
+            let index = base62.iter().position(|&r| r == remainder).unwrap();
+            result += index as u128 * 62u128.pow(num.len() as u32);
+        }
     }
 
     result
