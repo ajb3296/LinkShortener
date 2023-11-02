@@ -42,6 +42,9 @@ html, body {
 .title {
     font-size: 50px;
     font-weight: bold;
+
+    color: black;
+    text-decoration-line: none;
 }
 
 .center_box {

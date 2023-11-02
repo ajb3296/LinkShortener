@@ -1,4 +1,4 @@
-use crate::interface::{GetFullUrl, ShortUrlResponse};
+use crate::structs::{GetFullUrl, ShortUrlResponse};
 
 use crate::modules::database::enroll_to_db;
 use crate::modules::convert::base10_to_base62;

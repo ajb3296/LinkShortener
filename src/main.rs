@@ -6,7 +6,7 @@ mod modules;
 mod redirect;
 mod index;
 mod enroll;
-mod interface;
+mod structs;
 
 
 fn get_conn_builder(
