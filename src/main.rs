@@ -28,6 +28,8 @@ fn get_conn_builder(
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
+    let port = 80;
+
     // initialize environment
     dotenvy::dotenv().ok();
 
@@ -65,7 +67,7 @@ async fn main() -> std::io::Result<()> {
                 .service(redirect::redirect)
                 .service(enroll::enroll)
         })
-        .bind_openssl("0.0.0.0:8080", builder)?
+        .bind_openssl(format!("0.0.0.0:{}", port), builder)?
         .workers(4)
         .run()
         .await
@@ -79,7 +81,7 @@ async fn main() -> std::io::Result<()> {
                 .service(redirect::redirect)
                 .service(enroll::enroll)
         })
-        .bind(("0.0.0.0", 8000))?
+        .bind(("0.0.0.0", port))?
         .workers(4)
         .run()
         .await
