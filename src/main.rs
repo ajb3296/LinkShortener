@@ -28,7 +28,7 @@ fn get_conn_builder(
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    let port = 80;
+    let port = 8080;
 
     // initialize environment
     dotenvy::dotenv().ok();
