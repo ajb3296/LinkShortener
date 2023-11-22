@@ -6,3 +6,5 @@ Cargo.lock
 
 key.pem
 cert.pem
+
+analytics.js
